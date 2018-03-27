@@ -1,0 +1,25 @@
+################################################################################
+
+                                  Tasks in NLP
+
+################################################################################
+
+1. Tokenization
+Breaking down text into words and sentences
+
+2. Stopword Removal
+Filtering and removing common words from the sample which are there just for sentence structuring and grammer.
+
+3. N-Grams
+Identifying commonly occuring groups of words
+
+n-gram are group of words that occur together
+
+4. Word Sense Disambiguation
+Identify the context in which the words occurs. Many times same word can occur in n number of context. In here, we try to identify that context for what that word id used.
+
+5. Parts-of-Speech
+Identifying the parts of speech from the sentences.
+
+6. Stemming
+Sometime there is a same word by its ending is different due to which the word seems to be different. Stemming refers to getting the root of the word by removing ends of the words.
