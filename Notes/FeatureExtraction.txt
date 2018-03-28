@@ -1,0 +1,11 @@
+FEATURE EXTRACTION
+
+Term Frequency - (TF) :
+Term Frequency is defined as the number of times a word can occur inside the document.
+
+Inverse Document Frequency - (IDF) :
+Inverse document frequency for a word can be defined as the reciprocal of number of documents in which the word appears.
+
+Term frequency - Inverse Document Frequency - (TF-IDF) :
+TF-IDF for a given word can be defined as the product of term frequency and inverse document frequency.
+
