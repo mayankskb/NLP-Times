@@ -9,5 +9,12 @@ CBOW :
       Use the context (surronding) words to predict the target word.
       It is kind of Fill in the blanck in simple terms.
 
+      Advantages:
+              Probabilistic in nature, generally better than deterministic methods
+              Limited memory requirements, embeddings tends to be of reduced dimensionality
+      Disadvantages:
+              Words which have different meanings in different contexts may not be slotted well.
+              Takes very long to train if not properly optimized
+                    Maximum Likelihood Estimation is compute heavy
 Skip-grams :
       Use the target word to predict the context (surronding) words.
