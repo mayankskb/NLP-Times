@@ -1,0 +1,13 @@
+Word2Vec Model
+
+It can be generated using following two algorithms:
+CBOW - Continuous Bag of Words
+Skip-grams - Skip the word, look at neighbors
+
+
+CBOW :
+      Use the context (surronding) words to predict the target word.
+      It is kind of Fill in the blanck in simple terms.
+
+Skip-grams :
+      Use the target word to predict the context (surronding) words.

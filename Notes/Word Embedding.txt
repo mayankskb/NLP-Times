@@ -1,0 +1,80 @@
+#################################################################
+WORD EMBEDDINGS
+#################################################################
+
+Numerical representation of text which capture meanings and semantic relationship
+
+Word Embeddings can be categorized into following three classes
+1. One hot
+2. Frequency Based
+3. Prediction Based
+
+1. One hot encoding
+
+In this a document can be representated as the presence or absence of the word in the document.
+Naive Bayes Approaches are good to be used in this.
+
+Flaws of One Hot Encoding:
+  Large vocabulary - enormous feature vectors
+  Unordered - lost all context
+  Binary - lost frequency information
+
+  In addition, One hot encoding does not capture any semantic information or relationship between words.
+
+2. Frequency Based Embeddings
+
+    Count Vector :
+      How often a particular word occurs in a document i.e., the count or the frequency
+
+      Flaws:
+        Large vocabulary - enromous feature vectors
+                Alternative : Choose only the top N words
+        Unordered - lost all context
+        Semantics and word relationship lost
+
+    TF-IDF Vector
+      Captures how often a word occurs in a document as well as the entire corpus.
+
+      Important Advantages:
+        Feature vector much more tractable in size
+        Frequency and relevance captured
+
+      One big drawback:
+        Context still not captured
+
+    Co-occurrence Vector
+      Similiar words occur together and have similiar Context
+
+      Context Window : A window centered around a word, which includes a certain number of neighboring words.
+      Co-occurence : The number of times two words w1 and w2 have occured together in a context window
+
+      Evaluating:
+        Huge matrix size, huge memory
+        - V x V matrix for vocabulary size V
+        - Use top N words, matrix V x N still huge
+        Decomposed to smaller sizes
+        - Dimensionality reduction techniques such as Principal Component Analysis, Singular Value Decomposition
+
+        Advantages:
+          Preserves semantic relationship between words
+          Dimension reduction results in more accurate representation
+          Efficient computation, can be reused.
+
+3. Prediction Based Embeddings
+
+They are pretty magical in senseas they are the byfar the best algorithm to determine the context in which the word is used.
+Given words from its context, predict the word. Given the word, predict the words in its context.
+
+Similiar kind of words have there embedding very similiar e.g., London and Paris
+and their predicted numerical representation is of very low dimensionality.
+But it needs large corpus of data to know which word occur together and which word are similiar.
+
+This kind of ML model is unsupervised algorithm and similar kind of words get clustered together e.g., clustering or dimensionality reduction which can use neural nets or other prominent deep learning models.
+
+Embeddings are a way to encode words capturing the context around them.
+
+top known prediction based embedding algorithms are :
+  - Word2Vec
+      Use simple NN (not deep) to learn embeddings
+  - GLoVe (Global Vectors for Word Representation)
+      Uses word-word co-occurence matrix, nearest neighbors for word relationships.
