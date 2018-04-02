@@ -30,3 +30,20 @@ We will use the cosine similarity for this purpose. The cosine similarity for tw
 
  L2 norm is calculated as
                                                   L2_norm = Square_root(Sum(Square(values of embedding)))
+
+
+In this real world or in production environment we never uses softmax prediction. Instead of this we use soemthing that is called as noise constrastive estimator.
+
+-------------------------------------------------------------
+NOISE CONSTRASTIVE ESTIMATOR
+-------------------------------------------------------------
+Do not consider all possible context Words
+Use random sample(<100)
+Evaluate probability from these alone
+One choice - Noise Contrastive Estimation
+Performs well, ~100 X speedup
+
+Any gradient Descent needs a cost function to minimise
+Classification usually minimises cross-entropy(~ maximum likelihood estimation)
+NCE loss function in-built in TensorFlow
+tf.nn.nce_loss
