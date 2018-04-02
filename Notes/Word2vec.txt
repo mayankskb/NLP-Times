@@ -18,3 +18,15 @@ CBOW :
                     Maximum Likelihood Estimation is compute heavy
 Skip-grams :
       Use the target word to predict the context (surronding) words.
+
+
+-------------------------------------------------------------
+Similarity between two words having a embedding with them
+-------------------------------------------------------------
+
+We will use the cosine similarity for this purpose. The cosine similarity for two words A and B having their embedding can be calculated as follows:
+
+                                          cosine similarity = dotproduct(A and B) / product(L2 norm of A and B)
+
+ L2 norm is calculated as
+                                                  L2_norm = Square_root(Sum(Square(values of embedding)))
